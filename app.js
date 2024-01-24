@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             courseGoal: 'Master Vue by force by fire',
+            courseGoalB: 'Teach  vue to students',
             vueLink: 'https://vuejs.org/',
             userName: 'Naboth'
         };
@@ -11,9 +12,9 @@ const app = Vue.createApp({
         outputGoal() {
             const randomNumber = Math.random();
             if (randomNumber < 0.5 ) {
-                return 'Learn Vue';
+                return this.courseGoal;
             } else {
-                return 'Master Vue';
+                return this.courseGoalB;
             }
         }
     }
